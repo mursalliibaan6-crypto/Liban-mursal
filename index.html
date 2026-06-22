@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Two Layout - Responsive</title>
+    <style>
+        /* Guud ahaan habaynta bogga - Midab ka samaysan cawl khafiif ah (Light background) */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Shaxda weyn - Waxaan ka dhignay xiriir nidaamsan oo leh xariiq midab madow/cawl xarago leh ah */
+        .main-container {
+            background-color: #ffffff;
+            border: 5px solid #2c3e50; 
+            padding: 8px;
+            width: 100%; 
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+
+        /* Qaybta Sare ee Ciwaanka (Header) - Midab buluug madow ah (Dark slate blue) oo qoraal caddaan ah leh */
+        .header-section {
+            background-color: #34495e; 
+            border: 3px solid #16a085; 
+            text-align: center;
+            padding: 10px 5px;
+            margin-bottom: 8px;
+            box-sizing: border-box;
+        }
+
+        .header-section h1 {
+            margin: 0;
+            font-size: 22px; 
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* Qaybta dhexda ah */
+        .middle-section {
+            display: flex;
+            margin-bottom: 8px;
+            gap: 2px; 
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Tiirka 1aad: Menu-ka bidix (Sidebar) - Xariiqyo cawl xarago leh ah */
+        .sidebar {
+            border: 1px solid #bdc3c7; 
+            padding: 5px;
+            width: 18%; 
+            box-sizing: border-box;
+            word-break: break-all;
+            background-color: #fafbfc;
+        }
+
+        /* Links-ka waxaa loo bedelay midab u dhow nooca baduyoda (Teal) oo la safeeyay */
+        .sidebar a {
+            color: #16a085;
+            text-decoration: underline;
+            font-size: 11px;
+            display: inline-block;
+            margin-right: 3px;
+        }
+
+        /* Tiirka 2aad: Sanduuqa dhexda (Main Content) */
+        .content-box {
+            border: 1px solid #bdc3c7; 
+            padding: 5px;
+            width: 44%; 
+            box-sizing: border-box;
+            background-color: #ffffff;
+        }
+
+        /* Qaybta calanka iyo qoraalka */
+        .flag-and-text {
+            display: flex;
+            gap: 5px;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+
+        /* Habaynta Calanka Soomaaliya - Midabka buluugga rasmiga ah ee calanka (Royal Blue) */
+        .somali-flag {
+            width: 45%; 
+            aspect-ratio: 3 / 2; 
+            background-color: #4189DD; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            border-radius: 2px;
+        }
+
+        .somali-flag .star {
+            color: #ffffff;
+            font-size: 18px;
+        }
+
+        /* Qoraalka lorem ipsum - Midab cawl madow ah oo indhaha u roon */
+        .text-container {
+            font-size: 9px; 
+            line-height: 1.2;
+            color: #2c3e50;
+            text-align: left;
+        }
+
+        /* Tiirka 3aad: Shaxda midig (Table) */
+        .table-container {
+            width: 38%;
+            box-sizing: border-box;
+            border: 1px solid #bdc3c7; 
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #dcdde1; 
+            padding: 3px 2px;
+            font-size: 8px; 
+            color: #2c3e50;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        /* Madaxa shaxda (Table Header) oo loo yeelay midab khafiif ah oo degan */
+        th {
+            font-weight: bold;
+            background-color: #eaeded;
+            color: #34495e;
+        }
+        
+        /* Midabka isku dhex bedelka safafka shaxda (Zebra striping) si aqriska u fududaado */
+        tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        /* Qaybta Hoose (Footer) - Waxay la midab tahay Header-ka sare si uu isu dheeli tirnaan u jiro */
+        .footer-section {
+            background-color: #34495e;
+            border: 3px solid #16a085; 
+            text-align: center;
+            padding: 8px;
+            font-size: 11px;
+            font-weight: bold;
+            color: #ffffff;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <div class="header-section">
+            <h1>Bogga Warbixinta Ardayda</h1>
+        </div>
+
+        <div class="middle-section">
+            
+            <div class="sidebar">
+                <a href="#">Hoyga</a>
+                <a href="#">Ku saabsan</a>
+            </div>
+
+            <div class="content-box">
+                <div class="flag-and-text">
+                    <div class="somali-flag">
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <div class="text-container">
+                        Kusoo dhowaada nidaamka maamulka ardayda Soomaaliyeed.
+                    </div>
+                </div>
+                <div class="text-container">
+                    Halkan waxaad ka heli kartaa xogta saxda ah iyo liiska ardayda firfircoon.
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID-ga</th>
+                            <th>Tel-ka</th>
+                            <th>Magaca Ardayga</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>615552233</td>
+                            <td>MAXAMED CALI K.</td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>616664455</td>
+                            <td>FAADUMO CUMAR A.</td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>617778899</td>
+                            <td>XASAN YASIN M.</td>
+                        </tr>
+                        <tr>
+                            <td>004</td>
+                            <td>618881122</td>
+                            <td>AAMINA BULLE J.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="footer-section">
+            &copy; 2026 CNS253 LIBAN
+        </div>
+        
+    </div>
+
+</body>
+</html>
